@@ -29,6 +29,9 @@ const CourseViewer = ({ course, lessonProgress = [], setLessonProgress }: Props)
   const videoReady = activeLesson?.video?.status === "ready"
   const placeholder = activeLesson?.video?.placeholder
 
+  console.log("Active lesson:", activeLesson);  // Add this line
+console.log("Playback ID:", playbackId);  // And this line
+
   useEffect(() => {
     const lessonIndex = course.lessons.findIndex(lesson => lesson.id === activeLesson.id) + 1
     router.push(`/courses/${course.id}/lessons/${lessonIndex}`, undefined, { shallow: true })
