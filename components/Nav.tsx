@@ -57,6 +57,7 @@ const Nav = () => {
           ) : (
             <p>
               <button onClick={() => signIn()}>Sign in with GitHub</button>
+              <button onClick={() => signIn()}>Sign in with GitHub</button>
             </p>
           )}
         </div>
